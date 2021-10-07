@@ -2,7 +2,11 @@
 
 ## Sustainability chapter template
 
-Feel free to copy [the  sustainability chapter template](softwareArchitectureSustainabilityChapter.md) into your architecture document and elaborate it.
+Add a chapter to your architecture or design document. Feel free to copy [the  sustainability chapter template](softwareArchitectureSustainabilityChapter.md) into your document and elaborate it.
+
+## References
+
+* Read up on concepts at [Principles.Green](https://principles.green/)
 
 ## TODO write about
 
