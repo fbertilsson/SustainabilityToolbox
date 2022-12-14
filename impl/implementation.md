@@ -2,14 +2,19 @@
 
 ## Minimize Storage using Azure Storage Management Policy
 
-You can instruct Azure Storage to delete old data ore move to "cool" tier using a storage management policy. In Terraform it can look like this:
+You can instruct Azure Storage to move to "cool" tier and/or delete old data using a storage management policy.
+
+The below Terraform snippet creates a policy that does the following:
+
+* Moves blobs to cool tier after a week
+* Deletes blobs after a month
 
   ```tf
   resource "azurerm_storage_management_policy" "this" {
     storage_account_id = azurerm_storage_account.this.id
 
     rule {
-      name    = "purge"
+      name    = "coolAndDelete"
       enabled = true
       filters {
         blob_types   = ["blockBlob"]
